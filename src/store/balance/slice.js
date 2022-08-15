@@ -12,9 +12,13 @@ export const balanceSlice = createSlice({
       console.log("Hello from reducer");
       state.amount = state.amount + action.payload;
     },
+    withdraw: (state, action) => {
+      console.log("Hello from reducer");
+      state.amount = state.amount - action.payload;
+    },
   },
 });
 
-export const { deposit } = balanceSlice.actions;
+export const { deposit, withdraw } = balanceSlice.actions;
 
 export default balanceSlice.reducer;
